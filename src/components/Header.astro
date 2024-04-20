@@ -1,0 +1,22 @@
+---
+
+import LogoAnya from "./icons/LogoAnya.astro"
+import Carrito from "./Carrito.astro";
+import ThemeIcon from './ThemeIcon.astro';
+---
+
+<div class="grid grid-cols-4 justify-items-center h-20 items-center bg-[#6495ed] dark:bg-gray-600 text-white uppercase font-bold">
+  <div class="h-18">
+    <a href="1"><LogoAnya/></a>
+  </div>
+  <nav class="flex col-span-2 justify-evenly w-full invisible lg:visible">
+    <a href="1" class="">Inicio</a>
+    <a href="2" class="">Servicio</a>
+    <a href="3" class="">Producto</a>
+    <a href="4" class="">Contacto</a>
+  </nav>
+  <div class="items-center flex justify-between w-24 ">
+    <ThemeIcon />
+    <Carrito/>
+  </div>
+</div>

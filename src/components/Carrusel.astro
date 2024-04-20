@@ -1,0 +1,22 @@
+<div id="portada" class="min-h-[78vh] bg-cover bg-center block">
+</div>
+<script is:inline>
+var c = 0;
+const portada = document.querySelector("#portada");
+function carrusel(){
+  portada.style.opacity = "0";
+  portada.style.transition = "opacity 0.5s ease";
+  setTimeout(cambio, 500);
+}
+function cambio(){
+  c++;
+  if(c > 6){
+    c = 1;
+  }
+  portada.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(/public/img/portada${c}.jpg)`;
+  portada.style.opacity = "1";
+  portada.style.transition = "opacity 1s ease";
+  setTimeout(carrusel, 2000);
+}
+carrusel();
+</script>

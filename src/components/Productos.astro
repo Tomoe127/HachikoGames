@@ -39,12 +39,13 @@ import { productos } from "../consts/DataProducts.astro"
   
   const btn = document.querySelectorAll("button.carrito");
 
-  btn.forEach((button) => {
+    btn.forEach((button) => {
     button.addEventListener("click", () => {
       const title = button.getAttribute("data-title");
       const price = button.getAttribute("data-price");
-      console.log(title)
-      console.log(price)
+      
+      //console.log(title)
+      //console.log(price)
 
     })
   })

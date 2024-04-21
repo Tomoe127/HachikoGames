@@ -1,6 +1,7 @@
 ---
 import { productos } from "../consts/DataProducts.astro"
 
+
 ---
 <h2 class="uppercase flex justify-center pt-12">Lorem</h2>
 
@@ -21,7 +22,11 @@ import { productos } from "../consts/DataProducts.astro"
         <h2 class="text-pretty text-center h-12">{producto.title}</h2>
         <p class="text-center">Precio: ${producto.price}</p>
         <div class="flex justify-center">
-          <button  class="border-double border-4 border-orange-400 w-48 justify-center flex bg-orange-600 rounded">
+          <button
+            class="border-double border-4 border-orange-400 w-48 justify-center flex bg-orange-600 rounded carrito"
+            data-title={producto.title}
+            data-price={producto.price}
+          >
             Agregar al Carrito
           </button>
         </div>
@@ -29,3 +34,20 @@ import { productos } from "../consts/DataProducts.astro"
     ))
   }
 </div>
+
+<script>
+  
+  const btn = document.querySelectorAll("button.carrito");
+
+  btn.forEach((button) => {
+    button.addEventListener("click", () => {
+      const title = button.getAttribute("data-title");
+      const price = button.getAttribute("data-price");
+      console.log(title)
+      console.log(price)
+
+    })
+  })
+
+  
+</script>
